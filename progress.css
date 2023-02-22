@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.progress-mini {
+  position: relative;
+  width: 1024px;
+  height: 12px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
+  transition: all 1s;
+  z-index: 1;
+}
+
+.progress-mini>.step-mini-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #3bbeb4;
+  transition: all 1s;
+}
+
+.progress-mini.danger>.step-mini-bar {
+  background-color: #f5615f;
+}
+
+.progress-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1024px;
+  padding: 20px 0 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: 8px 8px 30px 0 rgb(0 0 0 / 20%);
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 1s;
+  z-index: 100;
+}
+
+.progress-wrap.danger {
+  background-color: #fef4f4;
+}
+
+.progress-wrap.hide {
+  transform: translate(0, -70%);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.progress-wrap.hide>.step-description,
+.progress-wrap.hide>.step-list {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.progress-wrap>.step-description {
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.progress-wrap>.step-description>span {
+  color: #3bbeb4;
+}
+
+.progress-wrap.danger>.step-description>span {
+  color: #f5615f;
+}
+
+.progress-wrap>.step-list {
+  position: relative;
+  margin-top: 80px;
+  width: 100%;
+  height: 12px;
+  background-color: #eee;
+}
+
+.progress-wrap.danger>.step-list {
+  background-color: rgba(245, 97, 95, 0.1)
+}
+
+.progress-wrap>.step-list::after {
+  clear: both;
+  content: '';
+}
+
+.progress-wrap>.step-list>figure {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ccc;
+  z-index: 1;
+}
+
+.progress-wrap.danger>.step-list>figure {
+  background-color: rgba(245, 97, 95, 0.5)
+}
+
+.progress-wrap>.step-list>figure>.step-success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  background-color: #3bbeb4;
+  visibility: hidden;
+}
+
+.progress-wrap.danger>.step-list>figure>.step-success {
+  background-color: #f5615f;
+}
+
+.progress-wrap>.step-list>figure>.step-towards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 48px;
+  font-size: 28px;
+  color: #fff;
+  background-color: #3bbeb4;
+  visibility: hidden;
+}
+
+
+.progress-wrap.danger>.step-list>figure>.step-towards {
+  background-color: #f5615f;
+}
+
+.progress-wrap>.step-list>figure.succes>.step-success,
+.progress-wrap>.step-list>figure.towards>.step-towards {
+  visibility: visible;
+  font-weight: bold;
+}
+
+.progress-wrap>.step-list>figure>.step-title {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: 60px;
+  width: 200px;
+  text-align: center;
+}
+
+.progress-wrap>.step-list>figure.succes>.step-title,
+.progress-wrap>.step-list>figure.towards>.step-title {
+  font-weight: bold;
+}
+
+.progress-wrap>.step-list>figure.succes>.step-title {
+  color: #3bbeb4;
+}
+
+
+
+.progress-wrap.danger>.step-list>figure.succes>.step-title {
+  color: #f5615f;
+}
+
+.progress-wrap>.step-list>.step-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.progress-wrap>.step-list>.step-bar>.step-gage {
+  position: absolute;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background-color: #3bbeb4;
+  /* transition: width 1s; */
+}
+
+.progress-wrap.danger>.step-list>.step-bar>.step-gage {
+  background-color: #f5615f;
+}
+
+.progress-wrap>.step-list>.step-bar>.step-icon {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 0;
+  margin-left: 30%;
+  transform: translate(-50%, -92px);
+  /* transition: margin-left 1s; */
+  z-index: 10;
+}
+
+.progress-wrap>.step-list>.step-bar.is-ani>.step-gage,
+.progress-wrap>.step-list>.step-bar.is-ani>.step-icon {
+  transition: 1s all;
+}
+
+.progress-wrap>footer {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.progress-wrap .open-close {
+  border: none;
+  font-size: 0;
+  background-color: transparent;
+}
+
+.progress-wrap .open-close::after {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url('./ic_progress_arrow.svg') no-repeat center center / 100%;
+  transform: rotate(0deg);
+  content: '';
+  transition: .5s all;
+}
+
+.progress-wrap.danger .open-close::after {
+  background: url('./ic_progress_arrow_danger.svg') no-repeat center center / 100%;
+}
+
+.progress-wrap.hide .open-close::after {
+  transform: rotate(180deg);
+}
+
+.guide-wrap {
+  margin-top: 400px;
+}
+
+.guide-wrap table {
+  width: 1024px;
+}
+
+.guide-wrap table th {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.guide-wrap table th span {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  top: 68px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 12px;
+  color: red;
+}
+
+.guide-wrap table td {
+  text-align: center;
+}
+
+.guide-wrap table td select,
+.guide-wrap table td button {
+  min-width: 112px;
+  height: 32px;
+  border: 1px solid #999;
+  outline: none;
+}
+
+.guide-wrap table td button {
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.guide-wrap table td button:active {
+  background-color: #999;
+}

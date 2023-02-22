@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./progress.css">
+</head>
+
+<body>
+  <aside id="progress"></aside>
+
+
+  <div class="guide-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>프로그레스유형</th>
+          <th>프로그레스단계</th>
+          <th>애니메이션여부</th>
+          <th>
+            에러모드여부<br />
+            <span>클럽기변 반납,<br />GUP 반납 유형에서만 지원</span>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <select id="category">
+            </select>
+          </td>
+          <td>
+            <select id="step">
+            </select>
+          </td>
+          <td>
+            <select id="animation">
+              <option value="1">True</option>
+              <option value="0">False</option>
+            </select>
+          </td>
+          <td>
+            <select id="errorMode" disabled>
+              <option value="0">False</option>
+              <option value="1">True</option>
+            </select>
+          </td>
+          <td>
+            <button id="apply">적용</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+  <script src="./progress.js"></script>
+  <script>
+    progress.render({ category: 'sell', step: 1.5, animation: true, errorMode: true })
+  </script>
+
+  <script src="./guide.js"></script>
+
+</body>
+
+</html>

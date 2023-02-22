@@ -1,0 +1,64 @@
+<svg width="148" height="161" viewBox="0 0 148 161" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter x="-36.5%" y="-32.1%" width="172.9%" height="164.2%" filterUnits="objectBoundingBox" id="0ga9qghgpa">
+            <feOffset dx="2" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g filter="url(#0ga9qghgpa)" transform="translate(26 26)" fill="none" fill-rule="evenodd">
+        <path d="M0 0h96v109H0z"/>
+        <path d="M69.163 90.377S80.376 106 48 106 26.837 90.377 26.837 90.377h42.326z" fill="#3BBEB4"/>
+        <path d="M43.41 37.3S32.782 11.735 3.657 0c0 0-.702 6.309-3.255 25.16-2.757 20.355 9.035 40.077 22.948 42.421L43.409 37.3z" fill="#F0EBB7"/>
+        <path d="M8.274 7.675s10.568 10.27 19.72 27.832" stroke="#ECE177" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M52.59 37.3S63.218 11.735 92.343 0c0 0 .702 6.309 3.255 25.16 2.757 20.355-9.035 40.077-22.948 42.421L52.591 37.3z" fill="#F0EBB7"/>
+        <path d="M87.726 7.675s-10.567 10.27-19.72 27.832" stroke="#ECE177" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M48 99.412c39.123 0 45.442-27.98 45.442-27.98l-9.268.175c-5.092-36.044-31.92-38.535-36.29-38.535-4.37 0-30.965 2.491-36.057 38.535l-9.27-.175S8.877 99.412 48 99.412" fill="#FEFEFE"/>
+        <path d="M54.816 69.734c0 2.718-3.494 4.09-7.804 4.09-4.31 0-7.803-1.372-7.803-4.09s3.494-5.751 7.803-5.751c4.31 0 7.804 3.033 7.804 5.751" fill="#FFFACC"/>
+        <path d="M37.693 63.399c0 2.64-.91 3.579-2.032 3.579-1.123 0-2.032-.938-2.032-3.58 0-2.64.909-3.58 2.032-3.58 1.122 0 2.032.94 2.032 3.58M62.371 63.399c0 2.64-.91 3.579-2.032 3.579-1.122 0-2.032-.938-2.032-3.58 0-2.64.91-3.58 2.032-3.58 1.123 0 2.032.94 2.032 3.58M51.014 71.483c0 1.424-1.71 3.093-3.82 3.093-2.108 0-3.818-1.669-3.818-3.093s1.71-2.579 3.819-2.579c2.11 0 3.819 1.155 3.819 2.579" fill="#333"/>
+        <path d="M38.296 79.004s2.276 4.311 8.899 4.311c6.622 0 8.898-4.311 8.898-4.311M56.093 79.004s.248 1.593 1.61 3.236" stroke="#333" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M47.195 72.826s-.411 4.996 0 10.093" stroke="#333" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>
